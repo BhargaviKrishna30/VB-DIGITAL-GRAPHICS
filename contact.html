@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - VB Graphics</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#111;
+  color:white;
+}
+
+/* NAVBAR */
+
+header{
+  width:100%;
+  padding:25px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#000000c4;
+  position:relative;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:700;
+  color:#d4a24c;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#d4a24c;
+  font-size:17px;
+}
+
+nav a:hover{
+  color:white;
+}
+
+/* MENU */
+
+.menu-toggle{
+  display:none;
+}
+
+/* CONTACT */
+
+.contact{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:80px 8%;
+}
+
+.contact-box{
+  width:100%;
+  max-width:700px;
+  background:#241814;
+  border:1px solid #5a3b2f;
+  border-radius:28px;
+  padding:50px;
+  text-align:center;
+}
+
+.contact-box h1{
+  font-size:48px;
+  color:#d4a24c;
+  margin-bottom:40px;
+}
+
+.contact-box p{
+  font-size:22px;
+  color:#ddd;
+  margin-bottom:25px;
+  line-height:1.8;
+}
+
+footer{
+  background:#111;
+  text-align:center;
+  padding:10px;
+  color:#999;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  header{
+    padding:20px 5%;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+
+  .menu-toggle{
+    display:block;
+    font-size:30px;
+    color:#d4a24c;
+    cursor:pointer;
+  }
+
+  nav{
+    display:none;
+  }
+
+  nav.show{
+    display:flex;
+    flex-direction:column;
+
+    position:absolute;
+
+    top:75px;
+    right:20px;
+
+    background:#241814;
+
+    padding:15px 22px;
+
+    border-radius:12px;
+
+    gap:15px;
+
+    z-index:1000;
+  }
+
+  nav a{
+    font-size:16px;
+  }
+
+  .contact{
+    padding:40px 5%;
+  }
+
+  .contact-box{
+    padding:35px 20px;
+  }
+
+  .contact-box h1{
+    font-size:34px;
+  }
+
+  .contact-box p{
+    font-size:17px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">𒆜 𝕍𝔹 𝔾ℝ𝔸ℙℍ𝕀ℂ𝕊 𒆜</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <nav id="mobileMenu">
+    <a href="index.html">𝓗𝓸𝓶𝓮</a>
+    <a href="gallery.html">𝓖𝓪𝓵𝓵𝓮𝓻𝔂</a>
+    <a href="contact.html">𝓒𝓸𝓷𝓽𝓪𝓬𝓽</a>
+  </nav>
+
+</header>
+
+<section class="contact">
+
+  <div class="contact-box">
+
+    <h1>Contact Us</h1>
+
+    <p>👤 VB Digital Graphics</p>
+
+    <p>📞 +91 9441060647</p>
+
+    <p>📍 Kesamudram, Telangana</p>
+
+    <p>📧 krishnajammula2009@gmail.com</p>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 VB Digital Graphics | All Rights Reserved
+</footer>
+
+<script>
+
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("show");
+}
+
+</script>
+
+</body>
+</html>
